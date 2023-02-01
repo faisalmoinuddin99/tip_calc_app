@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
+import androidx.compose.material.TextField
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -43,9 +44,14 @@ fun TipTimeScreen() {
         Text(text = stringResource(id = R.string.calculate_tip), fontSize = 24.sp,
             modifier = Modifier.align(Alignment.CenterHorizontally)
         )
+        EditNumberField()
     }
 }
 
+@Composable
+fun EditNumberField() {
+    TextField(value = "", onValueChange = {})
+}
 
 @Preview(showBackground = true)
 @Composable
